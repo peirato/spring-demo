@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 @SuppressWarnings("SpellCheckingInspection")
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class RedisTest {
+public class JedisTest {
 
     @Resource
     private JedisPool jedisPool;
@@ -25,6 +25,7 @@ public class RedisTest {
     @Test
     public void set() {
         p(jedis().set("user1", "hello !"));
+        jedis().expire("user1",60);
     }
 
     @Test
@@ -61,7 +62,13 @@ public class RedisTest {
         p(jedis().lpush("users", "C"));
         p(jedis().lpush("users", "D"));
         p(jedis().lpush("users", "E"));
+        jedis().expire("users",60);
 
+    }
+
+    @Test
+    public void rpush(){
+        p(jedis().rpush("users", "A"));
     }
 
     @Test
@@ -111,6 +118,32 @@ public class RedisTest {
         p(jedis().hgetAll("user_hash"));
         p(jedis().hkeys("user_hash"));
     }
+
+    /**
+     * set
+     */
+    @Test
+    public void sadd(){
+        p(jedis().sadd("favorite","football","badminton"));
+        jedis().expire("favorite",100);
+    }
+
+    @Test
+    public void scard(){
+        p(jedis().scard("favorite"));
+    }
+
+    @Test
+    public void smembers(){
+        p(jedis().smembers("favorite"));
+    }
+
+    @Test
+    public void spop(){
+        p(jedis().spop("favorite"));
+    }
+
+
 
     private Jedis jedis() {
         return jedisPool.getResource();

@@ -1,6 +1,8 @@
-package com.peirato.demo;
+package com.peirato.demo.config;
 
 import org.apache.shiro.mgt.SecurityManager;
+import org.apache.shiro.session.mgt.SessionManager;
+import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
@@ -14,18 +16,6 @@ import java.util.Map;
  */
 @Configuration
 public class ShiroConfig {
-
-    /**
-     * 注入 securityManager
-     * @param customRealm 自定义身份认证 realm
-     * @return
-     */
-    @Bean
-    public SecurityManager securityManager(CustomRealm customRealm){
-        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
-        securityManager.setRealm(customRealm);
-        return securityManager;
-    }
 
     /**
      * shiro 路径映射
@@ -59,4 +49,51 @@ public class ShiroConfig {
 
         return shiroFilterFactoryBean;
     }
+
+    /**
+     * 注入 securityManager
+     * @param customRealm 自定义身份认证 realm
+     * @return
+     */
+    @Bean
+    public SecurityManager securityManager(CustomRealm customRealm){
+        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+        securityManager.setRealm(customRealm);
+        //自定义session管理
+        securityManager.setSessionManager(sessionManager());
+        securityManager.setCacheManager(cacheManager());
+        return securityManager;
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Bean
+    public SessionManager sessionManager(){
+        MySessionManager mySessionManager = new MySessionManager();
+        mySessionManager.setSessionDAO(redisSessionDao());
+        return mySessionManager;
+    }
+
+    @Bean
+    public SessionDAO redisSessionDao() {
+        RedisSessionDao redisSessionDao = new RedisSessionDao();
+        redisSessionDao.setR
+
+    }
+
+
+    public RedisManager redisManager() {
+        RedisManager redisManager = new RedisManager();
+        redisManager.setHost(host);
+        redisManager.setPort(port);
+        redisManager.setExpire(1800);// 配置缓存过期时间
+        redisManager.setTimeout(timeout);
+        redisManager.setPassword(password);
+        return redisManager;
+    }
+
+
+
 }

@@ -1,4 +1,4 @@
-package com.peirato.demo;
+package com.peirato.demo.config;
 
 import com.peirato.demo.user.User;
 import com.peirato.demo.user.UserServer;

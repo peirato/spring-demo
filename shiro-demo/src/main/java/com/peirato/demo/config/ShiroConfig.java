@@ -79,7 +79,7 @@ public class ShiroConfig {
     @Bean
     public SessionDAO redisSessionDao() {
         RedisSessionDao redisSessionDao = new RedisSessionDao();
-        redisSessionDao.setR
+        redisSessionDao.set;
 
     }
 

@@ -31,7 +31,7 @@ public class AsyncDemoApplicationTests {
             executorService.execute(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println(Thread.currentThread().getName()+"-"+i1);
+                    System.out.println(Thread.currentThread().getName() + "-" + i1);
                 }
             });
             TimeUnit.MILLISECONDS.sleep(200);
@@ -55,12 +55,12 @@ public class AsyncDemoApplicationTests {
 
     @Test
     public void testAsyncServiceCallback() throws ExecutionException, InterruptedException {
-        int count =0;
+        int count = 0;
         for (int i = 0; i < 30; i++) {
             count += asyncService.asyncCallbalckRun(i).get();
             TimeUnit.MILLISECONDS.sleep(100);
         }
-        System.out.println("count :"+count);
+        System.out.println("count :" + count);
     }
 
 }

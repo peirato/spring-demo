@@ -23,7 +23,7 @@ public class ThreadConfig {
     }
 
     @Bean
-    public ThreadFactory getThreadFactory(){
+    public ThreadFactory getThreadFactory() {
         return new ThreadFactoryBuilder().setNameFormat("thread-pool-%d").build();
     }
 

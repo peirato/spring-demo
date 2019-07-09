@@ -11,15 +11,15 @@ import java.util.concurrent.Future;
 public class AsyncService {
 
     @Async
-    public void asyncRun(int i){
-        System.out.println(Thread.currentThread().getName()+"-"+i);
+    public void asyncRun(int i) {
+        System.out.println(Thread.currentThread().getName() + "-" + i);
     }
 
     @Async
-    public Future<Integer> asyncCallbalckRun(int i){
-        System.out.println(Thread.currentThread().getName()+" - "+i);
+    public Future<Integer> asyncCallbalckRun(int i) {
+        System.out.println(Thread.currentThread().getName() + " - " + i);
         return new AsyncResult<Integer>(i);
-}
+    }
 
 
 }

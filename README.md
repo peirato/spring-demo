@@ -21,3 +21,5 @@ FastJsonDemoTest
 - 实现通过token管理登陆状态
 - 更多的了解通过shiro + redis 管理session的方式
 - 通过shiro实现权限管理
+
+## gsf Spring 全家桶demo

@@ -1,14 +1,13 @@
-package com.peirato.demo;
+package com.peirato.springbucks.customer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AutoConfigureApplication {
+public class CunsolCustomerServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AutoConfigureApplication.class,args);
+        SpringApplication.run(CunsolCustomerServiceApplication.class, args);
     }
-
 
 }

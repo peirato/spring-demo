@@ -27,3 +27,9 @@ FastJsonDemoTest
 ## geek-time-design-pattern
 ## c12
 领域模型demo
+
+## algo-user-demo
+设计模式使用的demo
+### template-and-factory
+使用模板模式和工厂模式实现了一个对不同类型用户使用不同的购物车的demo
+主要使用模板模式工厂模式是通过spring实现的

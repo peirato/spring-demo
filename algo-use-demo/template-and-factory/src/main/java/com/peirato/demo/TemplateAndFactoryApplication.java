@@ -1,13 +1,12 @@
-package com.peirato.transcationdemo;
+package com.peirato.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TranscationDemoApplication {
+public class TemplateAndFactoryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TranscationDemoApplication.class, args);
+        SpringApplication.run(TemplateAndFactoryApplication.class,args);
     }
-
 }

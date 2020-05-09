@@ -1,4 +1,4 @@
-package com.peirato.transcationdemo;
+package com.peirato.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

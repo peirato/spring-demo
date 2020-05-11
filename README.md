@@ -28,8 +28,19 @@ FastJsonDemoTest
 ## c12
 领域模型demo
 
-## algo-user-demo
+## algo-use-demo
 设计模式使用的demo
 ### template-and-factory
 使用模板模式和工厂模式实现了一个对不同类型用户使用不同的购物车的demo
 主要使用模板模式工厂模式是通过spring实现的
+通过设计模的使用消除重复代码
+
+[详细](https://time.geekbang.org/column/article/228964)
+
+## spring-use-demo
+spring的一些使用技巧
+### reflection-and-annotation
+通过注解和反射消除重复代码
+demo是通过注解和反射，实现三方接口的调用
+
+[详细](https://time.geekbang.org/column/article/228964)

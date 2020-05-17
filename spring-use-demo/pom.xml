@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>reflection-and-annotation-demo</module>
+        <module>Interface-design</module>
     </modules>
 
 

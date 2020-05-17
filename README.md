@@ -42,5 +42,7 @@ spring的一些使用技巧
 ### reflection-and-annotation
 通过注解和反射消除重复代码
 demo是通过注解和反射，实现三方接口的调用
+### interface-design-demo
+使用注解自动包装response 和 使用注解自动生成接口版本
 
 [详细](https://time.geekbang.org/column/article/228964)

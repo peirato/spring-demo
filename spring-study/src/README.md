@@ -1,0 +1,2 @@
+main.resources.ioc.xml
+spring中注册和管理bean的各种方式

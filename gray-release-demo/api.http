@@ -1,0 +1,10 @@
+GET http://localhost:8080/service-a/get?uid=1
+Accept: application/json
+
+###
+#正常请求服务a的接口
+GET http://localhost:8080/service-a/get
+Accept: */*
+Cache-Control: no-cache
+
+

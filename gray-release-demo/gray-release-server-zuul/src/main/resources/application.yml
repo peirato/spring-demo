@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: service-zuul
+  cloud:
+    nacos.discovery.server-addr: 49.234.134.34:8848

@@ -1,0 +1,23 @@
+
+spring:
+    application:
+        name: service-b
+    cloud:
+        nacos.discovery.server-addr: 49.234.134.34:8848
+    profiles:
+        active: server1
+
+---
+server:
+    port: 8091
+spring:
+    profiles: server1
+demo-test: service-b1
+---
+server:
+    port: 8092
+spring:
+    profiles: server2
+demo-test: service-b2
+---
+
